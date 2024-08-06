@@ -22,9 +22,7 @@ const withAuth = (WrappedComponent) => {
   };
 
   // Assign a display name to the HOC for better debugging
-  if (process.env.NODE_ENV !== 'production') {
-    AuthComponent.displayName = `withAuth(${WrappedComponent.displayName || WrappedComponent.name || 'Component'})`;
-  }
+  AuthComponent.displayName = `withAuth(${WrappedComponent.displayName || WrappedComponent.name || 'Component'})`;
 
   return AuthComponent;
 };
